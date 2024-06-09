@@ -100,11 +100,6 @@ class Stopwatch(QWidget):
         country = self.country_combo.currentText()
         if country == "Deutschland":
             time = QDateTime.currentDateTime().toString("hh:mm:ss")
-        elif country == "USA":
-            time = QDateTime.currentDateTime().toTimeZone(Qt.QTimeZone("America/New_York")).toString("hh:mm:ss")
-        elif country == "Japan":
-            time = QDateTime.currentDateTime().toTimeZone(Qt.QTimeZone("Asia/Tokyo")).toString("hh:mm:ss")
-        self.world_time_label.setText(time)
 
     def startTimer(self):
         time_input = int(self.time_input.text())
